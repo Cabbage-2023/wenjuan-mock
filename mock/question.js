@@ -15,6 +15,29 @@ module.exports=[
         data:{
           id:Random.id(),
           title:Random.ctitle(),
+          componentList:[
+            //title
+            {
+              fe_id:Random.id(),
+              type:'questionTitle',//组件类型不能重复，前后端统一好
+              title:'标题',
+              props:{text:'标题，喵。',level:1,isCenter:false}
+            },
+            //input
+            {
+              fe_id:Random.id(),
+              type:'questionInput',
+              title:'输入框1',
+              props:{title:'输入框标题',placeholder:'冬马和纱'}
+            },
+            //input
+            {
+              fe_id:Random.id(),
+              type:'questionInput',
+              title:'输入框2',
+              props:{title:'输入框标题',placeholder:'牧濑红莉栖'}
+            }
+          ]
         }
       }
     }
