@@ -42,6 +42,59 @@ module.exports=[
               isHidden:false,
               isLocked:false,
               props:{title:'输入框标题',placeholder:'牧濑红莉栖'}
+            },
+             //Textarea
+             {
+              fe_id:Random.id(),
+              type:'questionTextarea',
+              title:'多行输入',
+              isHidden:false,
+              isLocked:false,
+              props:{title:'输入框标题',placeholder:'柳木诗梦'}
+            },
+            //paragraph
+            {
+              fe_id:Random.id(),
+              type:'questionParagraph',
+              title:'段落',
+              isHidden:false,
+              isLocked:false,
+              props:{text:'段落，喵。'}
+            },
+            //Radio
+            {
+              fe_id:Random.id(),
+              type:'questionRadio',
+              title:'单选',
+              isHidden:false,
+              isLocked:false,
+              props:{
+                title: '单选标题',
+                  isVertical: false,
+                  options: [
+                    {value:'item1',text:'选项1',},
+                    {value:'item2',text:'选项2',},
+                    {value:'item3',text:'选项3',},
+                  ],
+                  value: '',
+              }
+            },
+            //Checkbox
+            {
+              fe_id:Random.id(),
+              type:'questionCheckbox',
+              title:'多选',
+              isHidden:false,
+              isLocked:false,
+              props:{
+                title:"多选标题",
+                isVertical:false,
+                list:[
+                  {value:"1",text:"选项1",checked:false},
+                  {value:"2",text:"选项2",checked:false},
+                  {value:"3",text:"选项3",checked:false},
+                ],
+              }
             }
           ]
         }
