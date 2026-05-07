@@ -15,7 +15,7 @@ function getQuestionList(opt={}){
       // 如果 opt 没传 isStar (undefined)，就随机生成 boolean
       isStar: isStar !== undefined ? isStar : Random.boolean(),
       answerCount:Random.integer(0,100),
-      createAt:Random.datetime('MM-dd HH:mm:ss'),
+      createAt:Random.datetime('yyyy-MM-dd HH:mm:ss'),
       isDeleted,
     })
   }

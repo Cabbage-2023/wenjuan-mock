@@ -1,8 +1,8 @@
 const Mock = require('mockjs')
+const Random=Mock.Random
 
 const getQuestionList=require('./data/getQuestionList')
-
-const Random=Mock.Random
+const getComponentList=require('./data/getComponentList')
 
 module.exports=[
   {
@@ -18,89 +18,8 @@ module.exports=[
           desc:'问卷描述',
           js:'',
           css:'',
-          
-          componentList:[
-            //title
-            {
-              fe_id:Random.id(),
-              type:'questionTitle',//组件类型不能重复，前后端统一好
-              title:'标题',
-              isHidden:false,
-              isLocked:false,
-              props:{text:'标题，喵。',level:1,isCenter:false}
-            },
-            //input
-            {
-              fe_id:Random.id(),
-              type:'questionInput',
-              title:'输入框1',
-              isHidden:false,
-              isLocked:false,
-              props:{title:'输入框标题',placeholder:'冬马和纱'}
-            },
-            //input
-            {
-              fe_id:Random.id(),
-              type:'questionInput',
-              title:'输入框2',
-              isHidden:false,
-              isLocked:false,
-              props:{title:'输入框标题',placeholder:'牧濑红莉栖'}
-            },
-             //Textarea
-             {
-              fe_id:Random.id(),
-              type:'questionTextarea',
-              title:'多行输入',
-              isHidden:false,
-              isLocked:false,
-              props:{title:'输入框标题',placeholder:'柳木诗梦'}
-            },
-            //paragraph
-            {
-              fe_id:Random.id(),
-              type:'questionParagraph',
-              title:'段落',
-              isHidden:false,
-              isLocked:false,
-              props:{text:'段落，喵。'}
-            },
-            //Radio
-            {
-              fe_id:Random.id(),
-              type:'questionRadio',
-              title:'单选',
-              isHidden:false,
-              isLocked:false,
-              props:{
-                title: '单选标题',
-                  isVertical: false,
-                  options: [
-                    {value:'item1',text:'选项1',},
-                    {value:'item2',text:'选项2',},
-                    {value:'item3',text:'选项3',},
-                  ],
-                  value: '',
-              }
-            },
-            //Checkbox
-            {
-              fe_id:Random.id(),
-              type:'questionCheckbox',
-              title:'多选',
-              isHidden:false,
-              isLocked:false,
-              props:{
-                title:"多选标题",
-                isVertical:false,
-                list:[
-                  {value:"1",text:"选项1",checked:false},
-                  {value:"2",text:"选项2",checked:false},
-                  {value:"3",text:"选项3",checked:false},
-                ],
-              }
-            }
-          ]
+          isPublished:true,
+          componentList:getComponentList(),
         }
       }
     }
