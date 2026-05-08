@@ -11,7 +11,7 @@ function getComponentList(){
       title:'问卷信息',
       isHidden:false,
       isLocked:false,
-      props:{text:'问卷信息，喵。',desc:'问卷描述'}
+      props:{title:'问卷信息，喵。',desc:'问卷描述'}
     },
     //title
     {
@@ -56,7 +56,7 @@ function getComponentList(){
       title:'段落',
       isHidden:false,
       isLocked:false,
-      props:{text:'段落，喵。'}
+      props:{text:'段落，喵。\n段落，喵。'}
     },
     //Radio
     {
@@ -67,13 +67,13 @@ function getComponentList(){
       isLocked:false,
       props:{
         title: '单选标题',
-          isVertical: false,
-          options: [
-            {value:'item1',text:'选项1',},
-            {value:'item2',text:'选项2',},
-            {value:'item3',text:'选项3',},
-          ],
-          value: '',
+        isVertical: false,
+        options: [
+          {value:'item1',text:'选项1',},
+          {value:'item2',text:'选项2',},
+          {value:'item3',text:'选项3',},
+        ],
+        value: '',
       }
     },
     //Checkbox
@@ -87,7 +87,7 @@ function getComponentList(){
         title:"多选标题",
         isVertical:false,
         list:[
-          {value:"1",text:"选项1",checked:false},
+          {value:"1",text:"选项1",checked:true},
           {value:"2",text:"选项2",checked:false},
           {value:"3",text:"选项3",checked:false},
         ],
